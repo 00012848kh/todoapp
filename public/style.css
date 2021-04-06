@@ -90,3 +90,18 @@
     background: tomato;
     color: #fff;
 }
+
+.done,
+.undone {
+    text-decoration: none;
+    color: black;
+}
+
+.done {
+ 
+ text-decoration: line-through;
+}
+
+.undone {
+ text-decoration: none;
+}

@@ -18,7 +18,10 @@ block number1
     if bottom.length
       each text in bottom
         p.text
-          a(href=`/${ text.id }/update`) #{ text.description }
+          if text.done
+            a.done(href=`/${ text.id }/update`) #{ text.description }
+          else 
+            a.undone(href=`/${ text.id }/update`) #{ text.description }
           a.delete(href=`/${ text.id }/delete`) Delete
     else 
       p.text No any tasks available

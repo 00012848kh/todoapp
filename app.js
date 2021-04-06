@@ -82,7 +82,28 @@ app.get('/:id/delete', (req, res) => {
 
 
 app.get('/:id/update', (req, res) => {
-    
+    const id = req.params.id
+
+    fs.readFile('./data/bottom.json', (err, data) => {
+        if (err) throw err
+
+        const bottom = JSON.parse(data)
+        const text = bottom.filter(text => text.id == id)[0] 
+        const textIdx = bottom.indexOf(text)
+        const splicedText = bottom.splice(textIdx, 1) [0]
+
+        splicedText.archive = true
+
+        bottom.push(splicedText)
+
+
+        fs.writeFile('./data/bottom.json', JSON.stringify(bottom), (err) => {
+            if (err) throw err
+
+            res.render('home', { bottom: bottom })
+        })
+    })
+
 })
 
 app.listen(PORT, (err) =>{
