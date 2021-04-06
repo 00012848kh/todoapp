@@ -4,25 +4,25 @@ This app allows ti track the to dos.
 
 #### Instructions
 1.Download the source code
-'''bash 
-git clone [url to the github repo]
-'''
+```bash 
+git clone https://github.com/00012848kh/todoapp.git
+```
 
 or just download the *.zip file
 
 2.Install deps
-'''bash
+```bash
 npm install
-'''
+```
 
 3.Run the app
-'''bash
+```bash
 node app
-'''
+```
 
 #### Deps list
 - express
 - pug
 
 #### Link to github repo
-[url to the github repo ]
+https://github.com/00012848kh/todoapp.git
