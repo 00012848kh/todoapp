@@ -3,8 +3,13 @@ extends layout.pug
 block number1
   if error
     p.error Please fill the input
+
   if success 
     p.success Good job
+
+  if deleted 
+    p.success Deleted
+
   form.form(action='/add' method='POST')
     input.input(type='text' placeholder='Add your tasks here...' name='text')
     button.btn Add
@@ -12,6 +17,8 @@ block number1
   div.bottom
     if bottom.length
       each text in bottom
-        p.text #{ text.description }
+        p.text
+          a(href=`/${ text.id }/update`) #{ text.description }
+          a.delete(href=`/${ text.id }/delete`) Delete
     else 
       p.text No any tasks available

@@ -62,10 +62,33 @@ app.post('/add', (req, res) => {
     }
 })
 
+app.get('/:id/delete', (req, res) => {
+    const id = req.params.id
+
+    fs.readFile('./data/bottom.json', (err, data) => {
+        if (err) throw err
+
+        const bottom = JSON.parse(data)
+
+        const filteredBottom = bottom.filter(text => text.id != id)
+
+        fs.writeFile('./data/bottom.json', JSON.stringify(filteredBottom), (err) => {
+            if (err) throw err
+
+            res.render('home', { bottom: filteredBottom, deleted: true })
+        })
+    })
+})
+
+
+app.get('/:id/update', (req, res) => {
+    
+})
+
 app.listen(PORT, (err) =>{
     if (err) throw err
 
-    console.log('This app is running on port ${ PORT }')
+    console.log('This app is running on port 8000')
 })
 
 
