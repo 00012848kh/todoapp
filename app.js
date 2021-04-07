@@ -75,7 +75,7 @@ app.get('/:id/delete', (req, res) => {
         fs.writeFile('./data/bottom.json', JSON.stringify(filteredBottom), (err) => {
             if (err) throw err
 
-            res.render('home', { bottom: filteredBottom, deleted: true })
+            res.render('first', { bottom: filteredBottom, deleted: true })
         })
     })
 })
@@ -97,10 +97,21 @@ app.get('/:id/update', (req, res) => {
         fs.writeFile('./data/bottom.json', JSON.stringify(bottom), (err) => {
             if (err) throw err
 
-            res.render('home', { bottom: bottom })
+            res.render('first', { bottom: bottom })
         })
     })
 
+})
+
+
+app.get('/tasks',(req,res)=>{
+    fs.readFile('./data/bottom.json',(err,data)=>{
+        if (err) throw err
+
+        const bottom=JSON.parse(data)
+
+        res.render('first',{ bottom: bottom })
+    })
 })
 
 app.listen(PORT, (err) =>{

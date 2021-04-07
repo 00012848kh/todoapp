@@ -2,7 +2,12 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    background: #f5f7e8; 
+}
+
+body {
+    background-image: url('img.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .wrapper {
@@ -15,8 +20,12 @@
 .logo {
     text-align: center;
     font-size: 4rem;
-    color: #303032;
+    color: whitesmoke;
 
+}
+
+.container {
+    display: inline ;
 }
 
 .form {
@@ -35,7 +44,8 @@
     color: #74250e;
 }
 
-.btn {
+.btn,
+.tasks {
     display: inline-block;
     margin: 5px;
     padding: 10px 20px;
@@ -46,7 +56,19 @@
     color: #ebedef;
 }
 
+.tasks {
+    text-decoration: none;
+    text-align: center;
+}
+
+
+
 .btn:hover {
+    background-color: #c4cfd4;
+    color: #304960;
+}
+
+.tasks:hover {
     background-color: #c4cfd4;
     color: #304960;
 }
@@ -58,7 +80,7 @@
 
 .bottom {
     margin-top: 25px;
-    border: 1px solid #1f1d08;
+    /* border: 1px solid #1f1d08; */
     padding: 10px;
 }
 
@@ -86,13 +108,13 @@
 }
 
 .error {
-    color: red;
-    border-color: red;
+    background: red;
+    color: whitesmoke;
 }
 
 .success {
-    color:yellowgreen;
-    border-color: yellowgreen;
+    background: #f5f7e8;
+    color: black;
 }
 
 .delete {

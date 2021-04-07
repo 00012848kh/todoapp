@@ -13,15 +13,17 @@ block number1
   form.form(action='/add' method='POST')
     input.input(type='text' placeholder='Add your tasks here...' name='text')
     button.btn Add
+    a.tasks(href='/tasks') Tasks
 
-  div.bottom
-    if bottom.length
-      each text in bottom
-        p.text
-          if text.done
-            a.done(href=`/${ text.id }/update`) #{ text.description }
-          else 
-            a.undone(href=`/${ text.id }/update`) #{ text.description }
-          a.delete(href=`/${ text.id }/delete`) Delete
-    else 
-      p.text No any tasks available
+  //- div.bottom
+  //-   if bottom.length
+  //-     each text in bottom
+  //-       div.container 
+  //-         p.text 
+  //-           if text.done
+  //-             a.done(href=`/${ text.id }/update`) #{ text.description }
+  //-           else 
+  //-             a.undone(href=`/${ text.id }/update`) #{ text.description }
+  //-           a.delete(href=`/${ text.id }/delete`) Delete
+  //-     else 
+  //-       p.text No any tasks available
