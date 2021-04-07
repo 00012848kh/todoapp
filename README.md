@@ -28,4 +28,4 @@ node app
 https://github.com/00012848kh/todoapp.git
 
 #### Link to application on Glitch 
-https://windy-striped-yew.glitch.me/_8i70ecewb/update
+https://sepia-scratched-nylon.glitch.me/
