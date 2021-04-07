@@ -90,11 +90,8 @@ app.get('/:id/update', (req, res) => {
         const bottom = JSON.parse(data)
         const text = bottom.filter(text => text.id == id)[0] 
         const textIdx = bottom.indexOf(text)
-        const splicedText = bottom.splice(textIdx, 1) [0]
-
-        splicedText.archive = true
-
-        bottom.push(splicedText)
+        
+        bottom[textIdx].done = true;
 
 
         fs.writeFile('./data/bottom.json', JSON.stringify(bottom), (err) => {
