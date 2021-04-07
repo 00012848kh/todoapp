@@ -28,6 +28,18 @@ body {
     display: inline ;
 }
 
+.footer {
+    display: block;
+    position: absolute;
+    bottom: 0;
+    left: 15%;
+    font-size: 1.3rem;
+    padding: 10px;
+    color: black;
+
+}
+
+
 .form {
     width: 100%;
     display: flex;
