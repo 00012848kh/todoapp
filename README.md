@@ -28,4 +28,4 @@ node app
 https://github.com/00012848kh/todoapp.git
 
 #### Link to application on Glitch 
-https://sepia-scratched-nylon.glitch.me/
+https://nebulous-succinct-jumbo.glitch.me/
